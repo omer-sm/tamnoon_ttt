@@ -8,16 +8,22 @@ defmodule TamnoonTtt.Methods.StartPageMethods do
     trimmed_name = String.trim(state[:name])
     new_state = Map.put(state, :name, trimmed_name)
 
-    Tamnoon.Methods.pub(%{
-      "channel" => "queue",
-      "action" => %{
-        "method" => "queue_handshake",
-        "sender" => inspect(self()),
-        "name" => trimmed_name
-      }
-    }, new_state)
+    Tamnoon.Methods.pub(
+      %{
+        "channel" => "queue",
+        "action" => %{
+          "method" => "queue_handshake",
+          "sender" => inspect(self()),
+          "name" => trimmed_name
+        }
+      },
+      new_state
+    )
 
-    {%{name: trimmed_name}}
+    switch_page_action =
+      TamnoonTtt.Utils.PageManagement.switch_page_action("pages/queue_page.html.heex")
+
+    {%{name: trimmed_name}, [switch_page_action]}
   end
 
   defmethod :update_name do
