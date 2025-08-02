@@ -2,7 +2,7 @@ defmodule TamnoonTtt.Utils.PageManagement do
   alias Tamnoon.DOM
 
   @doc """
-  Replaces the page container with one containing the new page.
+  Returns an action that replaces the page container with one containing the new page.
   """
   @spec switch_page_action(new_page_path :: String.t()) :: Tamnoon.DOM.Actions.ReplaceNode.t()
   def switch_page_action(new_page_path), do:
