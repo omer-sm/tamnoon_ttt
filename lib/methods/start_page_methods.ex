@@ -3,9 +3,21 @@ defmodule TamnoonTtt.Methods.StartPageMethods do
   alias Tamnoon.DOM
 
   defmethod :join_queue do
-    # TBD
+    Tamnoon.Methods.sub(%{"channel" => "queue"}, state)
 
-    {%{name: String.trim(state[:name])}}
+    trimmed_name = String.trim(state[:name])
+    new_state = Map.put(state, :name, trimmed_name)
+
+    Tamnoon.Methods.pub(%{
+      "channel" => "queue",
+      "action" => %{
+        "method" => "queue_handshake",
+        "sender" => inspect(self()),
+        "name" => trimmed_name
+      }
+    }, new_state)
+
+    {%{name: trimmed_name}}
   end
 
   defmethod :update_name do

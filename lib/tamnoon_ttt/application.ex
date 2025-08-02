@@ -12,7 +12,7 @@ defmodule TamnoonTtt.Application do
        [
          [
            router: TamnoonTtt.Router,
-           methods_modules: [TamnoonTtt.Methods.StartPageMethods],
+           methods_modules: [TamnoonTtt.Methods.StartPageMethods, TamnoonTtt.Methods.QueueMethods],
            initial_state: %{
              name: ""
            }
