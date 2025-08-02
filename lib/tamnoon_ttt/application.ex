@@ -8,8 +8,7 @@ defmodule TamnoonTtt.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: TamnoonTtt.Worker.start_link(arg)
-      # {TamnoonTtt.Worker, arg}
+      {Tamnoon, [[router: TamnoonTtt.Router]]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
