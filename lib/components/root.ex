@@ -5,7 +5,7 @@ defmodule TamnoonTtt.Components.Root do
   def heex do
     ~s"""
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" data-theme="dark">
 
       <head>
         <meta name="description" content="Webpage description goes here" />
@@ -20,7 +20,7 @@ defmodule TamnoonTtt.Components.Root do
       </head>
 
       <body>
-          <h1>Welcome to your Tamnoon app!</h1>
+          <%= r.("ui/layout.html.heex") %>
       </body>
     </html>
     """

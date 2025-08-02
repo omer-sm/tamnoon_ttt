@@ -8,7 +8,16 @@ defmodule TamnoonTtt.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Tamnoon, [[router: TamnoonTtt.Router]]}
+      {Tamnoon,
+       [
+         [
+           router: TamnoonTtt.Router,
+           methods_modules: [TamnoonTtt.Methods.StartPageMethods],
+           initial_state: %{
+             name: ""
+           }
+         ]
+       ]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+  <head>
+    <meta name="description" content="Webpage description goes here" />
+    <meta charset="utf-8">
+    <title>Tamnoon Tic-Tac-Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="tamnoon/tamnoon_dom.js"></script>
+    <script src="tamnoon/tamnoon_driver.js"></script>
+    <link rel="icon" type="image/x-icon" href="/tamnoon/tamnoon_icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+      <div class="min-h-screen grid" style="grid-template-rows: auto 1fr;">
+  <div class="navbar bg-base-200 shadow-sm">
+  <a class="btn btn-ghost text-xl pointer-events-none">Tamnoon Tic-Tac-Toe</a>
+</div>
+  <div class="hero">
+  <div class="hero-content text-center">
+    <div class="max-w-lg">
+      <h1 class="text-5xl font-bold">Welcome to Tamnoon Tic-Tac-Toe!</h1>
+      <fieldset class="fieldset my-6">
+        <legend class="fieldset-legend text-lg">Enter your name to get started:</legend>
+        <input   type="text" class="input w-full tmnn-name-value tmnnevent-onchange-update_name" placeholder="Your name.." />
+      </fieldset>
+
+      <button  class="btn btn-primary tmnnevent-onclick-join_queue" id="play-btn" disabled>Play!</button>
+    </div>
+  </div>
+</div>
+</div>
+  </body>
+</html>
