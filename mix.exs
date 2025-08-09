@@ -22,7 +22,7 @@ defmodule TamnoonTtt.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tamnoon, "~> 1.0.0-rc.1"}
+      {:tamnoon, "~> 1.0.0-rc.2"}
     ]
   end
 end
