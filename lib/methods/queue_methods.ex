@@ -50,7 +50,6 @@ defmodule TamnoonTtt.Methods.QueueMethods do
     if sender == self_pid do
       {%{
          player_symbol: "X",
-         cell_0_0: "",
          # Force the other_player_name diff so it gets injected into the new page
          other_player_name: state[:other_player_name]
        }, [switch_page_action]}
@@ -73,7 +72,7 @@ defmodule TamnoonTtt.Methods.QueueMethods do
         new_state
       )
 
-      {%{player_symbol: "O", other_player_name: other_player_name, cell_0_0: ""},
+      {%{player_symbol: "O", other_player_name: other_player_name},
        [switch_page_action]}
     end
   end
