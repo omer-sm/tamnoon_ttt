@@ -38,7 +38,7 @@ defmodule TamnoonTtt.Methods.StartPageMethods do
     end
   end
 
-  defp toggle_play_button(disable) do
+  def toggle_play_button(disable) do
     DOM.Actions.ToggleAttribute.new!(%{
       attribute: "disabled",
       force_to: disable,

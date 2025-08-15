@@ -15,7 +15,8 @@ defmodule TamnoonTtt.Application do
            methods_modules: [
              TamnoonTtt.Methods.StartPageMethods,
              TamnoonTtt.Methods.QueueMethods,
-             TamnoonTtt.Methods.GameMethods
+             TamnoonTtt.Methods.GameMethods,
+             TamnoonTtt.Methods.GameOverMethods
            ],
            initial_state: %{
              name: ""
